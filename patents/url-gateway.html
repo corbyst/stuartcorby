@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>URL Gateway — Stuart Corby</title>
+<meta name="description" content="In an anti-counterfeit system and method unique product identifiers or codes are used to identify each unique item manufactured, allowing each single item to be distinguished from all other alike items. Furthermore, the manufacturers of these items p">
+<link rel="canonical" href="https://www.stuartcorby.com/patents/url-gateway.html">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #EFEBE2; }
+  * { box-sizing: border-box; }
+  a { color: #B4451F; }
+  a:hover { color: #1A1A18; }
+  .doc-shell { min-height:100vh; padding: 48px 20px 80px; }
+  .doc-nav { max-width: 760px; margin: 0 auto 28px; font-family:'IBM Plex Mono',monospace; font-size: 12px; letter-spacing:0.08em; text-transform:uppercase; }
+  .doc-nav a { text-decoration:none; border-bottom:1px solid rgba(180,69,31,0.35); }
+  .doc-paper { max-width: 760px; margin: 0 auto; background:#fff; box-shadow: 0 1px 3px rgba(26,26,24,0.08), 0 12px 40px rgba(26,26,24,0.10); padding: 0.9in 0.9in; border-radius: 2px; }
+  @media (max-width: 700px) { .doc-paper { padding: 0.55in 0.45in; } }
+  @media print {
+    html, body { background:#fff; }
+    .doc-nav { display:none; }
+    .doc-shell { padding:0; }
+    .doc-paper { box-shadow:none; padding:0.9in; max-width:none; }
+  }
+</style>
+</head>
+<body>
+<div class="doc-shell">
+  <div class="doc-nav"><a href="../index.html#ip">← Back to Free IP</a></div>
+  <div class="doc-paper">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;border-bottom:1px solid #DCD6CA;padding-bottom:8px">
+
+<span>Provisional Patent Claim</span>
+<span>Stuart Corby · 6 July 2020</span>
+
+    </div>
+<div style="font-family:Newsreader,Georgia,serif;font-size:11.5pt;line-height:1.5;color:#1A1A18">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:30px 0 14px">Anti-counterfeiting</div>
+<h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:30pt;line-height:1.1;letter-spacing:-0.01em;margin:0 0 20px">Ensuring the correct routing of electronic product verification messages for physical identifiers through the use of domain or subdomain message routing through the manufacturer's public URL</h1>
+<div style="border-top:1px solid #DCD6CA;border-bottom:1px solid #DCD6CA;padding:16px 0;margin:0 0 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;font-family:'IBM Plex Mono',monospace;font-size:8.5pt;line-height:1.45;color:#6B665C">
+<div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Inventor</span>Stuart Corby</div>
+<div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Field</span>Product identification &amp; verification</div>
+<div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Status</span>Published, unclaimed</div>
+</div>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Abstract</h2>
+<p style="margin:0 0 22px;font-size:12.5pt;line-height:1.5">In an anti-counterfeit system and method unique product identifiers or codes are used to identify each unique item manufactured, allowing each single item to be distinguished from all other alike items. Furthermore, the manufacturers of these items provide an electronic verification capability for each unique code they have used to label an item. This invention simply requires these messages to be routed directly to the public website Uniform Resource Locator (URL) domain or subdomain and then to be redirected to either the manufacturer's own electronic verification capability, or, as is more commonly practised, on to their respective third-party service provider — thus providing surety that the verifying party controls both the public-facing URL, and any redirects it then makes, of the product being queried for verification.</p>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Background</h2>
+<p style="margin:0 0 14px">The 2014 Drug Supply Chain Security Act (the DSCSA) requires that all pharmaceutical product be uniquely labelled, and that correctly credentialed third parties can verify those labels with the manufacturer during the entirety of a product's lifecycle. As the DSCSA does not stipulate the use of a centralized database, each manufacturer is responsible for verifying their own product. Third-party IT suppliers can be used to manage these verifications for manufacturers.</p>
+<p style="margin:0 0 14px">The problem occurs when a bad actor steps in and claims to be the authorized manufacturer of a product. Their IT service provider may also be a bad actor, in which case there is currently no way to ascertain at scale whether the actual manufacturer is receiving and verifying the verification requests, or whether an imposter has taken their place.</p>
+<p style="margin:0 0 22px">By agreeing to route all messages through the public URL of a manufacturer, the requestor can see that the responder has control of that company's internet presence, and therefore decide whether to trust that response. While this problem has manifested itself in identifying the correct pharmaceutical manufacturer for goods destined for sale in the United States, it is applicable to all uniquely labelled products that require electronic verification of label issuance.</p>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Background of the invention</h2>
+<p style="margin:0 0 22px">While the implementation of standards in supply-chain labelling has facilitated the rapid adoption of unique labelling technology and brings benefit to supply-chain visibility, it has also offered malicious actors and counterfeiters the capability of understanding the structure of a label and then forward-predicting future codes, even before manufacturers themselves have issued them. Even to the trained eye these codes look genuine. A verification process can be used to check the codes with the original manufacturer to ensure that they were issued, and to record time and location data for every verification so that the manufacturer can flag unusual behaviour and inform the enquiring party not to use that item. This invention generally relates to the systemic problem of correctly identifying a genuine manufacturer from a fake party when the rights to electronically confirm that a product code is good are claimed. The problem occurs in industries where the verification system is not centralized, or where not all manufacturers join the system — allowing bad actors to stake claims for products they do not manufacture, sell those items as genuine, and fake the verification responses of the item.</p>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Summary of the disclosure</h2>
+<p style="margin:0 0 22px">Certain embodiments of the present invention allow for a publicly known web address to be required in the verification of a product's unique identification codes. That web address, or sub-address, is responsible for redirecting any enquiry to the correct verification service provider or system; but because the address is publicly known and associated with the product, it allows the verifying party to ascertain that the product is being verified by the correct party and not a bad actor.</p>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Brief description of the drawings</h2>
+<p style="margin:0 0 8px">Figure 1A shows a flow chart of the requesting party's side of one embodiment of an anti-counterfeiting system in accordance with the invention.</p>
+<p style="margin:0 0 8px">Figure 2A is a flow chart showing the responding side of one embodiment of an anti-counterfeiting system in accordance with the invention.</p>
+<p style="margin:0 0 14px;color:#6B665C">Like reference numbers and designations in the various drawings indicate like elements.</p>
+<figure style="margin:0 0 20px;break-inside:avoid">
+<img alt="Fig. 1A — Requesting party" src="../assets/figures/urlgw-fig1a.svg" style="display:block;width:100%;border:1px solid #DCD6CA;background:#fff"/>
+<figcaption style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:8px">Fig. 1A — Requesting party</figcaption>
+</figure>
+<figure style="margin:0 0 20px;break-inside:avoid">
+<img alt="Fig. 2A — Responding party" src="../assets/figures/urlgw-fig2a.svg" style="display:block;width:100%;border:1px solid #DCD6CA;background:#fff"/>
+<figcaption style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:8px">Fig. 2A — Responding party</figcaption>
+</figure>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Detailed description of the invention</h2>
+<p style="margin:0 0 14px"><strong style="font-weight:500">Fig. 1A</strong> shows the flow chart for a party initiating an electronic verification request via the public, or modified public, URL of the genuine manufacturer of the product.</p>
+<div style="margin:0 0 18px;border-top:1px solid #DCD6CA;break-inside:avoid">
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Step 102</div>
+<div>The verifying party reads the code from the labelled item.</div>
+</div>
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Step 104</div>
+<div>The verifying party extracts the company identifier from the data contained within the code.</div>
+</div>
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Step 106</div>
+<div>The verifying party looks up the manufacturer's publicly available website — <span style="font-family:'IBM Plex Mono',monospace;font-size:9pt">www.genuinemanufacturer.com</span> — and routes a verification request to that domain, or to a subdomain such as <span style="font-family:'IBM Plex Mono',monospace;font-size:9pt">verify.genuinemanufacturer.com</span>.</div>
+</div>
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Await</div>
+<div>The verifying party awaits a response, knowing the respondent must have administrative control of the public website either to respond directly, or to have forwarded the request to their preferred third-party verification service provider.</div>
+</div>
+</div>
+<p style="margin:0 0 14px"><strong style="font-weight:500">Fig. 2A</strong> shows a flow chart for the responding side of one embodiment of an anti-counterfeiting system in accordance with the invention.</p>
+<div style="margin:0 0 22px;border-top:1px solid #DCD6CA;break-inside:avoid">
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Step 200</div>
+<div>A genuine manufacturer with a public URL receives an encrypted or in-the-clear verification request at their public website address, or their modified public website address.</div>
+</div>
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Item 202</div>
+<div>If they manage their own verifications, they decrypt the request and check the item's product codes against their manufacturing records.</div>
+</div>
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Item 204</div>
+<div>They respond to the requesting party. If instead they use a third-party service provider, they forward the message to that vendor, who performs the checks and responds on their behalf.</div>
+</div>
+</div>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px;break-after:avoid">Claims</h2>
+<p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.1em;text-transform:uppercase;color:#6B665C">What is claimed for:</p>
+<ol style="margin:0 0 22px;padding-left:22px">
+<li style="margin-bottom:12px">An anti-counterfeiting method that allows requesting parties within a network of computers to check electronically that a label was issued by the manufacturer:
+        <ol style="margin:10px 0 0;padding-left:20px" type="a">
+<li style="margin-bottom:10px">By routing messages to the publicly available and accessible website URL, or modified website URL, of a product manufacturer and receiving a response back directly from the manufacturer — thus giving surety that the responding party is the genuine product manufacturer, because the requestor has checked that they have control over the manufacturer's public URL.</li>
+<li>By routing messages to the publicly available and accessible website URL, or modified website URL, of a product manufacturer and receiving a response back from the manufacturer's designated third-party verification systems vendor, who has been forwarded the message from the manufacturer — thus giving surety that the responding party is the genuine product manufacturer, because the requestor has checked that they have control over the manufacturer's public URL.</li>
+</ol>
+</li>
+</ol>
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.18em;text-transform:uppercase;color:#6B665C;border-top:1px solid #DCD6CA;padding-top:14px">Ends</div>
+</div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#8B857A;border-top:1px solid #DCD6CA;padding-top:8px">
+
+<span>linkedin.com/in/stuartcorby</span>
+<span>Licence free — help yourself</span>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

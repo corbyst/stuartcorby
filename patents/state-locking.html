@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State Locking — Stuart Corby</title>
+<meta name="description" content="A process, in a system or network of computers, where two or more parties wish to isolate and protect their information about electronic physical product identifiers, but wish to share the state, status, or part or all of their records for that item ">
+<link rel="canonical" href="https://www.stuartcorby.com/patents/state-locking.html">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #EFEBE2; }
+  * { box-sizing: border-box; }
+  a { color: #B4451F; }
+  a:hover { color: #1A1A18; }
+  .doc-shell { min-height:100vh; padding: 48px 20px 80px; }
+  .doc-nav { max-width: 760px; margin: 0 auto 28px; font-family:'IBM Plex Mono',monospace; font-size: 12px; letter-spacing:0.08em; text-transform:uppercase; }
+  .doc-nav a { text-decoration:none; border-bottom:1px solid rgba(180,69,31,0.35); }
+  .doc-paper { max-width: 760px; margin: 0 auto; background:#fff; box-shadow: 0 1px 3px rgba(26,26,24,0.08), 0 12px 40px rgba(26,26,24,0.10); padding: 0.9in 0.9in; border-radius: 2px; }
+  @media (max-width: 700px) { .doc-paper { padding: 0.55in 0.45in; } }
+  @media print {
+    html, body { background:#fff; }
+    .doc-nav { display:none; }
+    .doc-shell { padding:0; }
+    .doc-paper { box-shadow:none; padding:0.9in; max-width:none; }
+  }
+</style>
+</head>
+<body>
+<div class="doc-shell">
+  <div class="doc-nav"><a href="../index.html#ip">← Back to Free IP</a></div>
+  <div class="doc-paper">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;border-bottom:1px solid #DCD6CA;padding-bottom:8px">
+
+<span>Provisional Patent Claim</span>
+<span>Stuart Corby · 7 September 2020</span>
+
+    </div>
+<div style="font-family:Newsreader,Georgia,serif;font-size:11.5pt;line-height:1.5;color:#1A1A18">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:30px 0 14px">Supply-chain privacy</div>
+<h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:30pt;line-height:1.1;letter-spacing:-0.01em;margin:0 0 20px">Encrypted, anonymized and obfuscated communication of status and state changes for electronic physical product identifiers</h1>
+<div style="border-top:1px solid #DCD6CA;border-bottom:1px solid #DCD6CA;padding:16px 0;margin:0 0 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;font-family:'IBM Plex Mono',monospace;font-size:8.5pt;line-height:1.45;color:#6B665C">
+<div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Inventor</span>Stuart Corby</div>
+<div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Field</span>Product identifiers &amp; distributed ledgers</div>
+<div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Status</span>Published · licence free</div>
+</div>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Abstract</h2>
+<p style="margin:0 0 22px;font-size:12.5pt;line-height:1.5">A process, in a system or network of computers, where two or more parties wish to isolate and protect their information about electronic physical product identifiers, but wish to share the state, status, or part or all of their records for that item if another correctly credentialed participant presents an obscured but identical set of identifiers to those of an item of which they have knowledge.</p>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Background</h2>
+<p style="margin:0 0 14px">The 2014 Drug Supply Chain Security Act (the DSCSA) requires that all pharmaceutical product be uniquely labelled, and that correctly credentialed third parties can verify those labels with the manufacturer during the entirety of a product's lifecycle. As the DSCSA does not stipulate the use of a centralized database, each manufacturer is responsible for verifying their own product; third-party IT suppliers can be used to manage those verifications.</p>
+<p style="margin:0 0 14px">The DSCSA further requires that by 2023 all product be fully traceable, from manufacture to dispensing. As participants do not wish to reveal their full inventory activity to each other, the Act allows each trading party to release information about a product to the next trading party and to vouch for its origins. This leads to two issues: how best to communicate the good state of a product from one party to the next, and how to backtrace such status over time and across all parties if a product is found to be tainted or tampered with.</p>
+<p style="margin:0 0 22px">This invention addresses that problem, and allows the state, current price, location or any other useful metadata to be associated with an item and made searchable by only authorized parties — while still obscuring any other specific or aggregated data about the product, or about each filing party's activity.</p>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Summary of the disclosure</h2>
+<p style="margin:0 0 14px">In an electronic system and method, <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">String<sub>a</sub></span> is a physical product identifier: a sequence of identifying data that can distinguish one item from all other alike items in a group or batch; can identify that group or batch from any other; can identify this product from any other physically alike product or version of the product from the same manufacturer; and can further distinguish this manufacturer's alike product from any other manufacturer's alike product.</p>
+<p style="margin:0 0 14px">In this system or network of computers, participating members of the community record all their physical product identifiers in the same format as <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">String<sub>a</sub></span> in a private repository, which also stores associated useful metadata about the product's historical activity — its state, location, ownership, temperature, or other products it has been associated with for the purposes of packing or shipping.</p>
+<p style="margin:0 0 14px">A static or rolling encryption <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">Key<sub>a</sub></span>, known to all authorized parties within the community, is combined with agreed parts of the identification string and used to calculate a unique, fixed-length output <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">Hash<sub>a</sub></span> by application of a hashing algorithm such as SHA-256 or another mathematical method, and added to each string's records.</p>
+<p style="margin:0 0 14px">When a community member wishes to make an inquiry of another party about a specific item, they use the output hash. If any other party has seen the item, they will have generated the same output hash and, by comparison to their own records, will understand which item the inquiry is about. If a community member has not seen that particular item, the hash is meaningless — and no details of the underlying product have been shared.</p>
+<p style="margin:0 0 14px">The addition of the extra string or key ensures that unauthorized parties who are not privy to <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">Key<sub>a</sub></span> but happen across <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">String<sub>a</sub></span> cannot confirm its existence against a community member's records. This allows the system to exist across a series of published, replicated ledgers which could be accessible to all — as in a blockchain or distributed ledger system — or in a private-access equivalent where, even though parties are invited to join and their access controlled, they are still not fully trusted.</p>
+<p style="margin:0 0 14px">When a request for information is sent using <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">Hash<sub>a</sub></span> and presented to one or more other community members, the members return a negative response if they do not have that hash in their records, or a positive response if they do. If required, further keys can be distributed and the output hashes generated and stored. These further <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">Keys<sub>b…n</sub></span> can require a positive responder to include agreed additional metadata, giving the system flexibility and allowing sub-groupings of authorized parties.</p>
+<p style="margin:0 0 14px">For the purposes of search efficiency, <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5pt">Hash<sub>a</sub></span> could be stored within a group, where the group represents a specific attribute such as — but not limited to — time, location, state, ownership or financial lien. The contents of this group may be obscured by encrypted containerization, where the container responds to a single inquiry with a single response. As the data size of the container may be ascertainable, salt can be added in the form of non-pertinent data that equalizes the storage size of all containers, thus preventing inference of the number of records held from the size of the container once it resides on the ledger.</p>
+<p style="margin:0 0 22px">While similar to a zero-knowledge proof, this claim is unique in that — because the physical product identifier is previously known to both parties in any transaction — the hash output can be generated asynchronously and stored in advance, greatly speeding up any later verification. There is no requirement to run a series of reiterative challenges against the revealing party: a single ask-and-answer message set suffices to attain confirmation. And as the information in the request is held in a standard-length single string, the message load on the system is considerably diminished compared with sending the underlying product identity information.</p>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Brief description of the drawings</h2>
+<div style="margin:0 0 16px;border-top:1px solid #DCD6CA;break-inside:avoid">
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Fig. 1A</div>
+<div>Using the data within a physical product identification string, combining it with a key, and calculating a non-reversible output string that is understandable to any other party with access to both the key and the identification string — but meaningless to anyone else.</div>
+</div>
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Fig. 2A</div>
+<div>Calculating the same non-reversible output string in order to prove to another party that you are in possession of both the key and the product identification string.</div>
+</div>
+<div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Fig. 3A</div>
+<div>How a recipient compares the inbound request hash with their stored set of hashes and returns either a negative rejection or a positive confirmation, with any pre-agreed metadata.</div>
+</div>
+</div>
+<figure style="margin:0 0 20px;break-inside:avoid">
+<img alt="Fig. 1A — Deriving the output hash from identifier and key" src="../assets/figures/state-fig1a.svg" style="display:block;width:100%;border:1px solid #DCD6CA;background:#fff"/>
+<figcaption style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:8px">Fig. 1A — Deriving the output hash from identifier and key</figcaption>
+</figure>
+<figure style="margin:0 0 20px;break-inside:avoid">
+<img alt="Fig. 2A — Proving possession of both key and identifier" src="../assets/figures/state-fig2a.svg" style="display:block;width:100%;border:1px solid #DCD6CA;background:#fff"/>
+<figcaption style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:8px">Fig. 2A — Proving possession of both key and identifier</figcaption>
+</figure>
+<figure style="margin:0 0 20px;break-inside:avoid">
+<img alt="Fig. 3A — Comparing an inbound hash and responding" src="../assets/figures/state-fig3a.svg" style="display:block;width:100%;border:1px solid #DCD6CA;background:#fff"/>
+<figcaption style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:8px">Fig. 3A — Comparing an inbound hash and responding</figcaption>
+</figure>
+<h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px;break-after:avoid">Claims</h2>
+<p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.1em;text-transform:uppercase;color:#6B665C">What is claimed for:</p>
+<div style="margin:0 0 16px;padding:14px 16px;border:1px solid #DCD6CA;font-family:'IBM Plex Mono',monospace;font-size:8.5pt;line-height:1.5;color:#6B665C;break-inside:avoid">Editorial note: the claims section of the filing as lodged repeats the claims text from the URL-gateway filing of 6 July 2020. It is reproduced below as filed. The claims implied by this disclosure — asynchronous hashing of a known identifier under a shared key, single-exchange confirmation, and salted container storage — have not been drafted.</div>
+<ol style="margin:0 0 22px;padding-left:22px">
+<li>An anti-counterfeiting method that allows requesting parties within a network of computers to check electronically that a label was issued by the manufacturer:
+        <ol style="margin:10px 0 0;padding-left:20px" type="a">
+<li style="margin-bottom:10px">By routing messages to the publicly available and accessible website URL, or modified website URL, of a product manufacturer and receiving a response back directly from the manufacturer — thus giving surety that the responding party is the genuine product manufacturer, because the requestor has checked that they have control over the manufacturer's public URL.</li>
+<li>By routing messages to the publicly available and accessible website URL, or modified website URL, of a product manufacturer and receiving a response back from the manufacturer's designated third-party verification systems vendor, who has been forwarded the message from the manufacturer — thus giving the same surety.</li>
+</ol>
+</li>
+</ol>
+<div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.18em;text-transform:uppercase;color:#6B665C;border-top:1px solid #DCD6CA;padding-top:14px">Ends</div>
+</div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#8B857A;border-top:1px solid #DCD6CA;padding-top:8px">
+
+<span>linkedin.com/in/stuartcorby</span>
+<span>Licence free — help yourself</span>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

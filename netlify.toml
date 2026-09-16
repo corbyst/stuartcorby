@@ -1,0 +1,35 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[redirects]]
+  from = "/patent-non-collision-serialisation"
+  to = "/patents/non-collision-serialisation.html"
+  status = 301
+
+[[redirects]]
+  from = "/patent-same-or-better-nft"
+  to = "/patents/same-or-better-nft.html"
+  status = 301
+
+[[redirects]]
+  from = "/patent-seniority-tiered-financing"
+  to = "/patents/seniority-tiered-financing.html"
+  status = 301
+
+[[redirects]]
+  from = "/patent-state-locking"
+  to = "/patents/state-locking.html"
+  status = 301
+
+[[redirects]]
+  from = "/patent-url-gateway"
+  to = "/patents/url-gateway.html"
+  status = 301
