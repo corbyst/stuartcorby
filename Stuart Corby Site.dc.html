@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Stuart Corby — operator, inventory finance, adaptive ski instructor · Vancouver BC</title>
+<meta name="description" content="Stuart Corby builds and runs hard technical things: founder of Figabl (inventory finance), first US pharmaceutical verification router service at Authentag, electronic trading at UBS in Asia. Five patents given away licence free. Vancouver, British Columbia.">
+<meta name="author" content="Stuart Corby">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.stuartcorby.com/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Stuart Corby">
+<meta property="og:title" content="Stuart Corby — I build hard technical things, then run them">
+<meta property="og:description" content="Founder of Figabl. Pharmaceutical verification with the FDA, electronic trading at UBS, $22M raised for inventory finance, five inventions released licence free. Also an adaptive ski instructor.">
+<meta property="og:url" content="https://www.stuartcorby.com/">
+<meta property="og:image" content="https://www.stuartcorby.com/assets/portrait.png">
+<meta property="og:locale" content="en_CA">
+<meta property="profile:first_name" content="Stuart">
+<meta property="profile:last_name" content="Corby">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stuart Corby — I build hard technical things, then run them">
+<meta name="twitter:description" content="Founder of Figabl. FDA pharmaceutical verification, electronic trading at UBS, five patents released licence free. Vancouver, BC.">
+<meta name="twitter:image" content="https://www.stuartcorby.com/assets/portrait.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Stuart Corby",
+  "url": "https://www.stuartcorby.com/",
+  "image": "https://www.stuartcorby.com/assets/portrait.png",
+  "jobTitle": "Founder",
+  "description": "Operator and founder working across inventory finance, product verification and electronic trading. Adaptive ski instructor in the Sea to Sky.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "BC", "addressCountry": "CA" },
+  "worksFor": { "@type": "Organization", "name": "Figabl", "url": "https://figabl.com/", "description": "Inventory finance for e-commerce sellers, valued by sales rather than cost." },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of St Andrews" },
+    { "@type": "EducationalOrganization", "name": "UWC Atlantic College" }
+  ],
+  "sameAs": ["https://www.linkedin.com/in/stuartcorby/", "https://figabl.com/"],
+  "knowsAbout": [
+    "Inventory finance",
+    "Drug Supply Chain Security Act",
+    "Pharmaceutical serialisation and verification",
+    "FDA GUDID medical device tracking",
+    "Electronic equity trading",
+    "Tokenised real-world assets",
+    "Adaptive ski instruction"
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "CPA QP, Hong Kong Institute of Certified Public Accountants (non-practising)" },
+    { "@type": "EducationalOccupationalCredential", "name": "PSIC Level II ski instructor" },
+    { "@type": "EducationalOccupationalCredential", "name": "CADS Level 1 adaptive ski instructor" }
+  ],
+  "owns": { "@type": "CreativeWork", "name": "US Patent 9,076,024 B2 — Anti-counterfeiting system and method" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F5F2EC; }
+  * { box-sizing: border-box; }
+  a { color: #B4451F; text-decoration: none; border-bottom: 1px solid rgba(180,69,31,0.35); }
+  a:hover { color: #1A1A18; border-bottom-color: #1A1A18; }
+</style>
+</helmet>
+<div style="background:#F5F2EC;color:#1A1A18;font-family:Newsreader,Georgia,serif;font-size:17px;line-height:1.55;min-height:100vh">
+
+  <div style="position:sticky;top:0;z-index:20;background:rgba(245,242,236,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #DCD6CA">
+    <div style="max-width:1080px;margin:0 auto;padding:14px 28px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <a href="#home" onClick="{{ goHome }}" style="color:#1A1A18;text-decoration:none;border:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer">Stuart Corby</a>
+      <div style="display:flex;gap:22px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase">
+        <a href="#home" onClick="{{ goHome }}" style="color:#1A1A18;cursor:pointer;padding-bottom:2px;text-decoration:none;border-bottom:1px solid {{ homeRule }}">Career</a>
+        <a href="#notables" onClick="{{ goNotables }}" style="color:#1A1A18;cursor:pointer;padding-bottom:2px;text-decoration:none;border-bottom:1px solid {{ notablesRule }}">Notables</a>
+        <a href="#ip" onClick="{{ goIp }}" style="color:#1A1A18;cursor:pointer;padding-bottom:2px;text-decoration:none;border-bottom:1px solid {{ ipRule }}">Free IP</a>
+        <a href="#outdoors" onClick="{{ goOutdoors }}" style="color:#1A1A18;cursor:pointer;padding-bottom:2px;text-decoration:none;border-bottom:1px solid {{ outdoorsRule }}">Snow &amp; Water</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:{{ homeDisplay }}">
+  <div style="max-width:1080px;margin:0 auto;padding:0 28px">
+
+    <div style="padding:88px 0 64px;border-bottom:1px solid #DCD6CA;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:end">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#6B665C;margin-bottom:28px">Vancouver, British Columbia</div>
+        <h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(44px,6vw,80px);line-height:1.02;letter-spacing:-0.02em;margin:0 0 28px;max-width:16em">I build hard technical things, then run them.</h1>
+        <p style="font-size:21px;line-height:1.5;max-width:34em;margin:0 0 18px;color:#2C2A26;text-wrap:pretty">Twenty-five years of thinking about how to rethink the tricky bits: the trading platform, the regulator, the offshore dev team, the restructure, the 5,000 people in a desert. I'm the person who goes and finds out how the thing actually works and then brings the step change.</p>
+        <p style="font-size:18px;line-height:1.55;max-width:34em;margin:0;color:#6B665C;text-wrap:pretty">Today that means Figabl, where we buy inventory at its expected value and sell it back when needed, so product founders can scale what already works. Before it: US wide pharmaceutical verification for the FDA, lifecycle tracking for inventory, and electronic trading at UBS. Also a whitewater raft guide, outdoor instructor, corporate facilitator, and a ski instructor who rethinks the fundamentals to help adaptive athletes excel in the mountains.</p>
+      </div>
+      <figure style="margin:0;align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;gap:14px">
+        <div style="width:100%;max-width:320px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#E4DFD5">
+          <img src="assets/portrait.png" alt="Stuart Corby" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.08)">
+        </div>
+        <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;text-align:center">STUART CORBY</figcaption>
+      </figure>
+    </div>
+
+    <div style="padding:52px 0;border-bottom:1px solid #DCD6CA">
+      <div style="max-width:30em">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(26px,3.6vw,38px);line-height:1.2;text-wrap:pretty">“You make and take your opportunities.”</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#6B665C;margin-top:18px">Jacko · Outward Bound Australia · 1993</div>
+      </div>
+    </div>
+
+    <div style="display:{{ metricsDisplay }}">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:#DCD6CA;border-bottom:1px solid #DCD6CA">
+      <div style="background:#F5F2EC;padding:24px 20px 26px">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:36px;line-height:1">1</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-top:8px">WIFE</div>
+      </div>
+      <div style="background:#F5F2EC;padding:24px 20px 26px">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:36px;line-height:1">2</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-top:8px">TEENAGERS</div>
+      </div>
+      <div style="background:#F5F2EC;padding:24px 20px 26px">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:36px;line-height:1">4</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-top:8px">CONTINENTS LIVED IN</div>
+      </div>
+      <div style="background:#F5F2EC;padding:24px 20px 26px">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:36px;line-height:1">8</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-top:8px">CRAZY CAREER PIVOTS</div>
+      </div>
+    </div>
+    </div>
+
+    <div style="padding:72px 0 64px;border-bottom:1px solid #DCD6CA;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:44px">
+      <div>
+        <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B4451F;margin-bottom:14px">Build it</h2>
+        <p style="margin:0;color:#2C2A26;text-wrap:pretty">Platforms that have to survive regulators, auditors and a Monday morning. Trading infrastructure, product verification, payment rails, expected value engines. I can hold the technical roadmap and the P&amp;L in the same conversation.</p>
+      </div>
+      <div>
+        <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B4451F;margin-bottom:14px">Fix it</h2>
+        <p style="margin:0;color:#2C2A26;text-wrap:pretty">Contraction is its own skill. I have taken a 6,200-person luxury retailer down to 5,052 without the wheels coming off, and made a family conglomerate profitable by saying no to most of it.</p>
+      </div>
+      <div>
+        <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B4451F;margin-bottom:14px">Explain it</h2>
+        <p style="margin:0;color:#2C2A26;text-wrap:pretty">Boards, the FDA, stock exchanges, industry associations, journalists, and a field of 5,000 festival-goers. Mostly the same job: say the true thing early, in language the room can act on.</p>
+      </div>
+    </div>
+
+    <div style="padding:56px 0 8px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px">
+      <figure style="margin:0">
+        <img src="assets/ubs-floor.jpg" alt="UBS trading floor" loading="lazy" style="display:block;width:100%;aspect-ratio:10/7;object-fit:cover;background:#E4DFD5">
+        <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">UBS · the floor, before it went electronic</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img src="assets/grundon.jpg" alt="Hydroclave medical waste plant" loading="lazy" style="display:block;width:100%;aspect-ratio:10/7;object-fit:cover;background:#E4DFD5">
+        <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">Grundon · dioxin-free, two tonnes an hour</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img src="assets/further-future-team.jpg" alt="Further Future, Moab desert" loading="lazy" style="display:block;width:100%;aspect-ratio:10/7;object-fit:cover;background:#E4DFD5">
+        <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">Further Future · front of house, Moab</figcaption>
+      </figure>
+    </div>
+
+    <div style="padding:56px 0 24px">
+      <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;margin-bottom:34px">Career</h2>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:0">
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2021 —</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">Co-founder, Figabl <span style="color: rgb(107, 102, 92); font-size: 19px;">· the inventory finance company&nbsp;</span><span style="color: rgb(107, 102, 92); font-size: 19px;">· Jackson, WY</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">We value inventory by sales, not cost — buying e-commerce stock where it already sits in the seller's 3PL, selling it back as they need it, no margin charged. It lets a founder scale beyond their bank's idea of them, without dilution or delay.&nbsp; Billions of dollars of sales analyzed, hundreds of millions financed. Zero defaults to funders.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2014 — 2021</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">CEO &amp; Co-founder, Authentag <span style="color:#6B665C;font-size:19px">· McLean, VA</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">The first live Verification Router Service for US pharmaceuticals, so any packet could be checked under the Drug Supply Chain Security Act. Led an Accenture development team, worked alongside Deloitte, co-wrote the industry test scripts, presented to the FDA and worked with every major manufacturer. National Science Foundation recipient.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2017 — 2018</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">Technical Advisor, Hdac Technology <span style="color:#6B665C;font-size:19px">· Seoul</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">Machine-to-machine billing for IoT devices. The token generation event raised $256M, which was a great deal of money to watch arrive in a single afternoon.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2016 — 2017</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">Advisor to the President, Lane Crawford Joyce Group <span style="color:#6B665C;font-size:19px">· Hong Kong</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">Restructuring Asia's leading purveyor of luxury goods against the e-commerce threat. Interviewed every senior manager, ran the change management, reported progress to the chair.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2015 — 2016</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">Advisor to the Chair, Further Future <span style="color:#6B665C;font-size:19px">· Moab Desert, NV</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">Creative Collisions, executed. Ran front of house across two festivals — 5,000+ attendees, 240 staff, temporary accommodation, and the crisis management that comes free with both.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2008 — 2011</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">COO, Asia Pacific Adventure <span style="color:#6B665C;font-size:19px">· Hong Kong</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">Asia's largest outdoor educator and management trainer: ran five divisions, 120+ staff, 30,000 programme days a year including all of Disney's experiential learning in Asia. Net margins up 51% on cost control and product focus, with standardised reporting and safety procedures group-wide.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2002 — 2008</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">Co-founder, I&amp;W and Bio-Supplies <span style="color:#6B665C;font-size:19px">· Hong Kong</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">Licensed Greenpeace-approved medical waste treatment and sold it into Europe's largest private waste processor and Metro Manila — taking the dioxin out of London hospital waste, still processing two tonnes an hour today. Alongside it, compostable packaging for Hong Kong's better-known cafés, retailers and cosmetics brands.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2004 — 2008</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">Non-Executive Director, SEP Sprint <span style="color:#6B665C;font-size:19px">· Melbourne</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">Independent board member of the southern hemisphere's largest secure printer: government documents and postage stamps. Strategy and oversight.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">1997 — 2002</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">Associate Director, UBS <span style="color:#6B665C;font-size:19px">· London · Stamford · Hong Kong</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">One firm under four names — SBC Warburg, Warburg Dillon Read, UBS Warburg, then UBS. Graduate recruit to architect and business owner of the electronic trading platform in Asia, handling over 80% of the bank's electronic equity flow across Asia Pacific and Australia. First web-based trade onto the London Stock Exchange, first international electronic order onto the NYSE, negotiations with the Korean, Singaporean and Hong Kong exchanges, and a hand in the international technical trading standards.</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA;border-bottom:1px solid #DCD6CA">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">Before that</div>
+          <div>
+            <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.15">Raft guide, instructor, logistics officer&nbsp;<span style="color: rgb(107, 102, 92); font-size: 19px;">· Northern California&nbsp;</span><span style="color: rgb(107, 102, 92); font-size: 19px;">· Outback&nbsp;</span><span style="color: rgb(107, 102, 92); font-size: 19px;">· Southern Wales</span></h3>
+            <p style="margin:8px 0 0;max-width:44em;color:#2C2A26;text-wrap:pretty">Class IV+ whitewater in California, wilderness logistics for Outward Bound Australia, and five summers teaching kayaking and climbing to disabled and disadvantaged kids in Wales. Still the best training I have had. <span style="font-family:'IBM Plex Mono',monospace;font-size:12px"><a href="#outdoors" onClick="{{ goOutdoors }}" style="cursor:pointer;color:#B4451F;border-bottom:1px solid rgba(180,69,31,0.35)">SNOW &amp; WATER →</a></span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="padding:64px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:44px;border-bottom:1px solid #DCD6CA">
+      <div>
+        <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;margin-bottom:18px">Education</h2>
+        <div style="margin-bottom:16px">
+          <div style="font-size:18px">MA International Relations &amp; Economics</div>
+          <div style="color:#6B665C;font-family:'IBM Plex Mono',monospace;font-size:12px;margin-top:4px">University of St Andrews · 1994–1998</div>
+        </div>
+        <div style="margin-bottom:16px">
+          <div style="font-size:18px">CPA QP, non-practising</div>
+          <div style="color:#6B665C;font-family:'IBM Plex Mono',monospace;font-size:12px;margin-top:4px">HK Institute of CPAs / Kaplan · 2009</div>
+        </div>
+        <div>
+          <div style="font-size:18px">International Baccalaureate</div>
+          <div style="color:#6B665C;font-family:'IBM Plex Mono',monospace;font-size:12px;margin-top:4px">UWC Atlantic College, Mountbatten Scholar · 1991–1993</div>
+        </div>
+      </div>
+      <div>
+        <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;margin-bottom:18px">Licences &amp; tools</h2>
+        <p style="margin:0 0 14px;color:#2C2A26;text-wrap:pretty">Financial representative and dealing licences: SFC Hong Kong, FSA London (both lapsed — I stopped needing them). US patent holder.</p>
+        <p style="margin:0;color:#2C2A26;text-wrap:pretty">Hands-on with accounting and cloud project stacks, and genuinely useful in Figma, Illustrator, Sketch and SketchUp — which means the roadmap deck and the wireframes are usually mine.</p>
+      </div>
+      <div>
+        <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;margin-bottom:18px">Not for pay</h2>
+        <p style="margin:0 0 14px;color:#2C2A26;text-wrap:pretty">Adaptive ski instructing, volunteer for the charity and paid by Whistler Blackcomb. Helped out at the Winter Invictus Games.</p>
+        <p style="margin:0;color:#2C2A26;text-wrap:pretty">Badminton coach at the local secondary school. Previously CSR Sowers Exchange advisory board, Hong Kong.</p>
+      </div>
+    </div>
+
+    <div style="display:{{ epigraphDisplay }}">
+    <div style="padding:76px 0 40px;max-width:30em">
+      <div style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(28px,4vw,42px);line-height:1.2;text-wrap:pretty">“Stu is so insightful<br><span style="color:#B4451F">it concerns me.</span>”</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#6B665C;margin-top:20px">Eric Schmidt · Alphabet / Google</div>
+    </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div style="display:{{ notablesDisplay }}">
+  <div style="max-width:1080px;margin:0 auto;padding:0 28px">
+    <div style="padding:76px 0 48px;border-bottom:1px solid #DCD6CA">
+      <h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.05;margin:0 0 22px">Notables</h1>
+      <p style="font-size:20px;max-width:32em;margin:0;color:#6B665C;text-wrap:pretty">Things that happened, in the order they happened. Some of them were even the plan.</p>
+    </div>
+
+    <div style="padding:40px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px">
+      <img src="assets/ff-pods.jpg" alt="Further Future sleeping pods" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#E4DFD5">
+      <img src="assets/ubs-hk.jpg" alt="UBS Hong Kong" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#E4DFD5">
+      <img src="assets/tunnel-chute.jpg" alt="Tunnel Chute, class IV+" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#E4DFD5">
+      <img src="assets/kyoto.jpg" alt="Kyoto" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#E4DFD5">
+      <img src="assets/korfball.jpg" alt="St Andrews korfball" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#E4DFD5">
+      <img src="assets/lane-crawford.jpg" alt="Lane Crawford store floor" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#E4DFD5">
+      <img src="assets/pacific-coffee.jpg" alt="Pacific Coffee, Hong Kong" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#E4DFD5">
+      <img src="assets/hda-stand.jpg" alt="On the stand, HDA Washington DC" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#E4DFD5">
+    </div>
+
+    <div style="padding:56px 0 20px">
+      <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B4451F;margin-bottom:8px">2021 — today</h2>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2025</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Coached athletes into the first winter hybrid Invictus Games, then met them on the finish line <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">BRITISH COLUMBIA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2023</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Connected private offices and credit risk funds to the online-sales inventory finance market <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">USA · CANADA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2022</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Financed over $100M of end sales for independent Amazon and Shopify sellers <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">USA · CANADA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2021/22</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Connected treasury teams into Circle's USDC <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">USA · CANADA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2021</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Teamed with Deloitte to take NFT-based finance to their manufacturing clients <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">USA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2021</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Put Amazon seller inventory into NFTs to reach DeFi yield seekers, and trialled funding real-world assets through NFT-backed smart contracts <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">EU · HONG KONG</span></div>
+      </div>
+    </div>
+
+    <div style="padding:40px 0 20px">
+      <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B4451F;margin-bottom:8px">2014 — 2018</h2>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2018</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">First US pharma Verification Router Service provider <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">WASHINGTON DC</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2018</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Advised industry on implementing the Drug Supply Chain Security Act for product tracking <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">WASHINGTON DC</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2018</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Technical advisor, Hdac — a $256M token generation event <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">SOUTH KOREA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2016</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">FDA medical device verification, and US government tracking work <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">WASHINGTON DC</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2016</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Corporate restructure of a Hong Kong listed company in the face of e-commerce <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">HONG KONG</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2015</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Threw two gatherings — 3,000 then 5,000 people — in the Moab desert <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">UTAH · USA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2015</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">US patent granted: anti-counterfeiting system and method <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">USA</span></div>
+      </div>
+    </div>
+
+    <div style="padding:40px 0 20px">
+      <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B4451F;margin-bottom:8px">1991 — 2008</h2>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2002–08</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Installed the UK's first Greenpeace-approved, dioxin-free medical waste plant for Grundon, and greened Pacific Coffee, Nude Skincare and Lane Crawford <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">LONDON · HONG KONG</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">2000–02</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Systems architect and business owner: brought electronic trading to Asia <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">HONG KONG</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">1999/00</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">First web-based trade onto the London Stock Exchange, with SBC Warburg; first international electronic order onto the NYSE <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">LONDON · NEW YORK</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">1997–99</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Class IV+ and V whitewater raft guide <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">CALIFORNIA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">1995–97</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Coach and captain, St Andrews University Korfball Club — took the team to the European Championships after an advanced coaching course in the Netherlands <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">ST ANDREWS · FRIESLAND</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">1993</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Logistics officer, Outward Bound Australia — Sir Vincent Fairfax Scholar <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">AUSTRALIA</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">1992–95</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Adaptive outdoors instructor, Extra Mural Centre, St Donat's Castle <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">WALES</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #DCD6CA;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:4px">1994</div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.2">Failed to learn Japanese <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B665C;letter-spacing:0.06em">TOKYO · KYOTO</span></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div style="display:{{ ipDisplay }}">
+  <div style="max-width:1080px;margin:0 auto;padding:0 28px">
+    <div style="padding:76px 0 48px;border-bottom:1px solid #DCD6CA">
+      <h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.05;margin:0 0 22px">Free IP. Help yourself.</h1>
+      <p style="font-size:20px;max-width:34em;margin:0 0 26px;color:#2C2A26;text-wrap:pretty">Six inventions in product identification, verification, inventory tokenisation and pooled capital. One granted, the rest published and deliberately unclaimed. I would rather they were used than litigated. No licence, no fee, no conversation required — though I am happy to have one. Each one below is readable as a typeset claim.</p>
+      <div style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:22px;color:#6B665C;max-width:26em">“A patent is really like buying a lottery ticket to a lawsuit.” <span style="font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;display:block;margin-top:12px">SAID SOMEONE, AT SOMETIME</span></div>
+    </div>
+
+    <div style="padding:44px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;align-items:start">
+      <figure style="margin:0"><img src="assets/authentag-scan.jpg" alt="Scanning a tag that has expired" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#E4DFD5"><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">Scan it. The tag is expired — do not use.</figcaption></figure>
+      <figure style="margin:0"><img src="assets/udi-app.png" alt="UDI Check app for class II medical devices" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#E4DFD5"><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">UDI Check · FDA GUDID lookups, in the aisle</figcaption></figure>
+    </div>
+
+    <div style="padding:20px 0 40px">
+      <div style="padding:34px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#B4451F;margin-bottom:12px">Granted · US9076024B2 · 2015</div>
+        <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1.15;margin-bottom:12px;max-width:26em">Anti-counterfeiting system and method</h3>
+        <p style="margin:0 0 14px;max-width:44em;color:#2C2A26;text-wrap:pretty">Identification codes generated from line-of-item data, affixed and then scanned before distribution so only real, shipped codes are flagged active. A shopper scanning with a phone gets a straight answer on whether the unit is genuine, or a route to someone at the manufacturer who can tell them.</p>
+        <a href="https://patents.google.com/patent/US9076024B2/en" target="_blank" rel="noopener" style="white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em">US9076024B2 on the public record →</a>
+      </div>
+
+      <div style="padding:34px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-bottom:12px">Published · 62/704,128</div>
+        <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1.15;margin-bottom:12px;max-width:26em">Non-collision random serialisation, so counterfeiters cannot guess forward</h3>
+        <p style="margin:0 0 14px;max-width:44em;color:#2C2A26;text-wrap:pretty">Universal labelling standards let a bad actor predict the identifiers of next month's production run and print perfectly plausible fakes. Randomising serials within the standard, without collisions, removes the guess.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap"><a href="Patent - Non-Collision Serialisation.dc.html" style="white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;font-weight:500">Read the claim →</a></div>
+      </div>
+
+      <div style="padding:34px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-bottom:12px">PUBLISHED · FREE AND CLEAR</div>
+        <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1.15;margin-bottom:12px;max-width:26em">Verification routing through the manufacturer's own public URL</h3>
+        <p style="margin:0 0 14px;max-width:44em;color:#2C2A26;text-wrap:pretty">Route verification messages to the manufacturer's public domain or subdomain, and let them redirect to their own service or their provider. Whoever answers the question demonstrably controls the brand's front door.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap"><a href="Patent - URL Gateway.dc.html" style="white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;font-weight:500">Read the claim →</a></div>
+      </div>
+
+      <div style="padding:34px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-bottom:12px">Published ·&nbsp;<span style="letter-spacing: 1.32px;">FREE and CLEAR</span></div>
+        <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1.15;margin-bottom:12px;max-width:26em">Encrypted, anonymised state sharing between competitors</h3>
+        <p style="margin:0 0 14px;max-width:44em;color:#2C2A26;text-wrap:pretty">Two parties who will not share their records can still share the state of a single item: present an obscured but identical identifier and, if your credentials hold, you learn the status of the thing you already knew about. Nothing else leaks.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap"><a href="Patent - State Locking.dc.html" style="white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;font-weight:500">Read the claim →</a></div>
+      </div>
+
+      <div style="padding:34px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-bottom:12px">PUBLISHED ·&nbsp;<span style="letter-spacing: 1.32px;">FREE and CLEAR</span></div>
+        <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1.15;margin-bottom:12px;max-width:26em">Reward tiers that reorder themselves as earlier capital leaves</h3>
+        <p style="margin:0 0 14px;max-width:44em;color:#2C2A26;text-wrap:pretty">In a pooled capital structure, your rate should improve as the capital ahead of you exits — no lockups, no penalties, nothing to claim. The hard part is arithmetic: recomputing every position on every exit is unaffordable on-chain. An order-statistic tree and deferred settlement bring the cost down to logarithmic per exit.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap"><a href="Patent - Seniority Tiered Financing.dc.html" style="white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;font-weight:500">Read the claim →</a></div>
+      </div>
+
+      <div style="padding:34px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#6B665C;margin-bottom:12px">PUBLISHED ·&nbsp;<span style="letter-spacing: 1.32px;">FREE and CLEAR</span></div>
+        <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1.15;margin-bottom:12px;max-width:26em">Same or Better non-fungible token</h3>
+        <p style="margin:0 0 14px;max-width:44em;color:#2C2A26;text-wrap:pretty">Representing real inventory on-chain without minting a token per unit. Group like with like, and guarantee the count, the consideration and the age profile of what sits underneath is the same or better than at issuance — so restocking cannot quietly swap long-dated goods for short-dated ones.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap">
+          <a href="Patent - Same or Better NFT.dc.html" style="white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;font-weight:500">Read the claim →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div style="display:{{ outdoorsDisplay }}">
+  <div style="max-width:1080px;margin:0 auto;padding:0 28px">
+    <div style="padding:76px 0 48px;border-bottom:1px solid #DCD6CA">
+      <h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.05;margin:0 0 22px">Snow &amp; water</h1>
+      <p style="font-size:20px;max-width:34em;margin:0;color:#2C2A26;text-wrap:pretty">The other, serious fun, half of the CV. Thirty years of taking people somewhere slightly harder than they expected and bringing them back pleased about it. It is the same work as the boardroom, with better weather and clearer consequences.</p>
+    </div>
+
+    <figure style="margin:0;padding:40px 0 0">
+      <img src="assets/tunnel-chute.jpg" alt="Running Tunnel Chute, class IV+" loading="lazy" style="display:block;width:100%;aspect-ratio:16/7;object-fit:cover;background:#E4DFD5">
+      <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:10px">Tunnel Chute, Middle Fork American · Tributary Whitewater</figcaption>
+    </figure>
+
+    <div style="padding:28px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px">
+      <figure style="margin:0">
+        <img src="assets/outward-bound.jpg" alt="Outward Bound Australia camp" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#E4DFD5">
+        <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">Outward Bound Australia · 1993</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img src="assets/st-donats.jpg" alt="St Donat's Castle, Wales" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#E4DFD5">
+        <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">St Donat's Castle, Wales · where it started</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <img src="assets/ff-pods.jpg" alt="Further Future pods" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#E4DFD5">
+        <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">5,000 people, 240 staff · Moab</figcaption>
+      </figure>
+    </div>
+
+    <div style="padding:56px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px">
+      <div>
+        <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B4451F;margin-bottom:20px">Now</h2>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:28px;line-height:1.15;margin-bottom:10px">Adaptive ski instructor</div>
+        <p style="margin:0 0 16px;color:#2C2A26;text-wrap:pretty">Part-time professional: paid by Whistler Blackcomb, and volunteering with the Whistler Adaptive Sports Program.&nbsp;</p>
+        <p style="margin:0 0 16px;color:#2C2A26;text-wrap:pretty">In 2025 I helped coach athletes ahead of the first winter hybrid Invictus Games here in the Sea to Sky, then got to meet them on a finish line they had been aiming at for months. The most committed people I have worked with, in any industry. Smiles I will keep.</p>
+        
+        <figure style="margin:0 0 18px"><img src="assets/invictus-2025.png" alt="Whistler Adaptive guides at the Invictus Games" loading="lazy" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#E4DFD5"><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B665C;margin-top:9px">Invictus Games 2025 · guiding blind athletes, Whistler Adaptive</figcaption></figure>
+        <p style="margin:0;color:#6B665C;text-wrap:pretty">Also badminton coach at the local secondary school, on the theory that a sport you can play indoors in November has its merits.</p>
+      </div>
+      <div>
+        <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;margin-bottom:20px">Tickets &amp; certifications</h2>
+        <div style="display:grid;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#2C2A26">
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">PSIC Level II ski instructor</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">CADS Level 1 adaptive ski instructor</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">Whitewater raft guide, class IV+</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">Swiftwater rescue technician</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">Climbing site supervisor</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">Kayak instructor — pool &amp; inshore</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">RYA Level 3 sailing · offshore personal survival</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">First aid — Canada (previously UK, Australia, HK)</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px">Community Sports Leader Award</div>
+          <div style="border-bottom:1px solid #DCD6CA;padding-bottom:9px;color:#6B665C">Lifeguard — expired, sadly</div>
+          <div>SOP writing &amp; risk assessment</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:64px 0 20px">
+      <h2  style="margin:0;font-weight:400;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;margin-bottom:26px">Track record</h2>
+      <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2016 —</div>
+        <div>
+          <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.15">Whistler Adaptive &amp; Whistler Blackcomb · ski instructor</h3>
+          <p style="margin:6px 0 0;max-width:42em;color:#2C2A26;text-wrap:pretty">A proper mountain day for athletes of every ability. Invictus Games coaching in 2025.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2015 — 2017</div>
+        <div>
+          <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.15">Further Future, Moab · head of front of house</h3>
+          <p style="margin:6px 0 0;max-width:42em;color:#2C2A26;text-wrap:pretty">Every onsite aspect of delivery for 5,000+ attendees across two residential festivals, leading a team of 240.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">2008 — 2011</div>
+        <div>
+          <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.15">Asia Pacific Adventure, Hong Kong · COO</h3>
+          <p style="margin:6px 0 0;max-width:42em;color:#2C2A26;text-wrap:pretty">Asia's largest outdoor education group. Five divisions, 120+ staff, 30,000 programme days a year, all of Disney's experiential learning in Asia — and group-wide standard operating procedures so the safety case did not depend on who was rostered.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">1996 — 2000</div>
+        <div>
+          <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.15">Tributary Whitewater, California · lead raft guide</h3>
+          <p style="margin:6px 0 0;max-width:42em;color:#2C2A26;text-wrap:pretty">Class III, IV and IV+ rivers, overnight and multi-day trips, four summers.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">1994 — 1996</div>
+        <div>
+          <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.15">Camp counsellor &amp; ropes course technician</h3>
+          <p style="margin:6px 0 0;max-width:42em;color:#2C2A26;text-wrap:pretty">ADHD/ADD camps and rather more expensive camps, UK and USA.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">1993</div>
+        <div>
+          <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.15">Outward Bound Australia · logistics, climbing, rescue</h3>
+          <p style="margin:6px 0 0;max-width:42em;color:#2C2A26;text-wrap:pretty">Logistics coordinator for 5 to 30-day wilderness expeditions. Sir Vincent Fairfax Scholar.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:22px 0;border-top:1px solid #DCD6CA;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B665C;padding-top:5px">1992 — 1995</div>
+        <div>
+          <h3  style="margin:0;font-weight:400;font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.15">Extra Mural Centre, St Donat's, Wales · lead instructor</h3>
+          <p style="margin:6px 0 0;max-width:42em;color:#2C2A26;text-wrap:pretty">Climbing, kayaking, swimming, mountain biking, archery and team building for disabled and disadvantaged young people. Where all of this started.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div style="border-top:1px solid #DCD6CA;margin-top:40px;background:#EFEBE2">
+    <div style="max-width:1080px;margin:0 auto;padding:64px 28px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(30px,4vw,44px);line-height:1.1;margin-bottom:14px">Let's talk.</div>
+        <p style="margin:0;color:#2C2A26;max-width:26em;text-wrap:pretty">Best on LinkedIn — that is also where the resume stays current. Founders, funds and anyone with an awkward technical problem: I read everything.</p>
+      </div>
+      <div style="display:grid;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:13px">
+        <a href="https://www.linkedin.com/in/stuartcorby/" style="letter-spacing:0.04em">linkedin.com/in/stuartcorby →</a>
+        
+        
+      </div>
+    </div>
+    <div style="max-width:1080px;margin:0 auto;padding:0 28px 34px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8B857A">Stuart Corby · 2026</div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;landingPage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;home&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;notables&quot;,&quot;ip&quot;,&quot;outdoors&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;showMetrics&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;showEpigraph&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+class Component extends DCLogic {
+  state = { page: null };
+  go(page) {
+    this.setState({ page });
+    if (typeof window !== "undefined") window.scrollTo(0, 0);
+  }
+  componentDidMount() {
+    document.documentElement.lang = "en-CA";
+    window.addEventListener("hashchange", this.onHash);
+    this.onHash();
+  }
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this.onHash);
+  }
+  onHash = () => {
+    const k = (window.location.hash || "").replace("#", "");
+    if (["home", "notables", "ip", "outdoors"].includes(k)) this.setState({ page: k });
+  };
+  renderVals() {
+    const p = this.state.page || this.props.landingPage || "home";
+    const rule = (k) => (p === k ? "#1A1A18" : "transparent");
+    return {
+      isHome: p === "home",
+      homeDisplay: p === "home" ? "block" : "none",
+      notablesDisplay: p === "notables" ? "block" : "none",
+      ipDisplay: p === "ip" ? "block" : "none",
+      outdoorsDisplay: p === "outdoors" ? "block" : "none",
+      metricsDisplay: (this.props.showMetrics ?? true) ? "block" : "none",
+      epigraphDisplay: (this.props.showEpigraph ?? true) ? "block" : "none",
+      isNotables: p === "notables",
+      isIp: p === "ip",
+      isOutdoors: p === "outdoors",
+      homeRule: rule("home"),
+      notablesRule: rule("notables"),
+      ipRule: rule("ip"),
+      outdoorsRule: rule("outdoors"),
+      goHome: () => this.go("home"),
+      goNotables: () => this.go("notables"),
+      goIp: () => this.go("ip"),
+      goOutdoors: () => this.go("outdoors")
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  doc-page:not(:defined) { visibility: hidden; }
+  a { color: #B4451F; }
+  a:hover { color: #1A1A18; }
+</style>
+<script src="./doc-page.js"></script>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#F5F2EC"/><rect x="60" y="56" width="80" height="88" rx="4" fill="#fff" stroke="#1A1A18" stroke-width="3"/><text x="100" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#B4451F">SB</text></svg></template>
+<doc-page margin="0.9in">
+  <div slot="header" style="display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#6B665C;border-bottom:1px solid #DCD6CA;padding-bottom:8px">
+    <span>Patent Claim · SorB NFT</span>
+    <span>Stuart Corby · 22 November</span>
+  </div>
+  <div slot="footer" style="display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#8B857A;border-top:1px solid #DCD6CA;padding-top:8px">
+    <span>linkedin.com/in/stuartcorby</span>
+    <span>Licence free — help yourself</span>
+  </div>
+
+  <div style="font-family:Newsreader,Georgia,serif;font-size:11.5pt;line-height:1.5;color:#1A1A18">
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:30px 0 14px">Inventory tokenisation</div>
+
+    <h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:30pt;line-height:1.1;letter-spacing:-0.01em;margin:0 0 20px">Same or Better Non-Fungible Token (SorB NFT)</h1>
+
+    <div style="border-top:1px solid #DCD6CA;border-bottom:1px solid #DCD6CA;padding:16px 0;margin:0 0 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;font-family:'IBM Plex Mono',monospace;font-size:8.5pt;line-height:1.45;color:#6B665C">
+      <div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Inventor</span>Stuart Corby</div>
+      <div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Federally sponsored R&amp;D</span>National Science Foundation grant #1938362</div>
+      <div><span style="display:block;letter-spacing:0.12em;text-transform:uppercase;color:#8B857A;margin-bottom:4px">Status</span>Published · licence free</div>
+    </div>
+
+    <h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Abstract</h2>
+    <p style="margin:0 0 22px;font-size:12.5pt;line-height:1.5">This invention allows the electronic representation of real-world inventory assets on a rolling basis, taking into account inflows and outflows through sales and resupply — without requiring each individual item to have its own non-fungible token. Instead, like-for-like items are grouped together, while ensuring that the count, and/or the consideration, and/or the age profile of the underlying assets remains the same as or greater than at original issuance. This reduces the cost of issuing electronic representations of inventory, and protects the integrity of the token by preventing degradation of value through the exchange of longer-expiration items for shorter-expiration ones.</p>
+
+    <h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Background of the invention</h2>
+    <p style="margin:0 0 14px">A non-fungible token (NFT) is an electronic representation of a real-world asset (RWA) or assets, used to describe that asset in an agreed manner and then locked using cryptography. Accurate electronic representation of an underlying tangible asset is useful across many fields, and has played a significant role in allowing the finance and sale of assets in electronic format, both in traditional markets and within distributed ledger and blockchain communities.</p>
+    <p style="margin:0 0 22px">For high-value inventory items, issuing an NFT for each item owned may be cost-effective. But for lower-cost or consumable items facing large amounts of turnover, the cost of issuing an NFT per item becomes prohibitive — and issuing a traditional NFT for a fixed group of items means it must be burnt every time an item ceases to be a valid member of the group, whether sold or damaged in transit. The need arises for an adapted NFT that still provides surety about the underlying items described, yet allows controlled flexibility for the purposes of stock turnover.</p>
+
+    <h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Summary of the invention</h2>
+    <p style="margin:0 0 14px">A traditional NFT describes a single item or group of items so that they can be identified accurately amongst other similar items, and allows the current owner to assign various rights electronically to all or part of that item. A Same-or-Better NFT ("SorB NFT") allows the application of a single NFT to a flexible but verified set of inventory.</p>
+    <p style="margin:0 0 14px">A SorB NFT describes single or multiple asset lines, or stock keeping units (SKUs), by agreed physical attributes such as — but not limited to — a SKU-level identifying code describing the manufacturer, the product, or both. The SorB NFT also prescribes a verified source that it trusts to provide current data about the levels and values of the SKUs it includes. This allows the issuer to cycle through inventory without continuously destroying and reissuing tokens. Creating and destroying an NFT incurs the cost of recording its state on a blockchain or distributed ledger, making a SorB NFT desirable across all inventory items, because turnover is inevitable.</p>
+    <p style="margin:0 0 14px">A SorB NFT requires the issuer, or an independent third party, to verify that the inventory levels described remain available. If inventory is sold, it can be replaced by the "same" item or a "better" item in accordance with the description contained in the token. In practice this allows an issuer to keep a reservoir of inventory, sell their product, and replenish it before the amount held drops below that described within the SorB NFT. Replacement items must be the same as those they replace, or better — where "better" conforms to the requirements stipulated in the original description, cryptographically locked into the token on issuance.</p>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace;font-size:9pt;font-weight:500;letter-spacing:0.1em;color:#1A1A18;margin:0 0 8px">Worked example: expiration dates</h3>
+    <p style="margin:0 0 14px">Consider a SorB NFT that cycles through product with an expiration date. One of the describing attributes is the sum of each expiration date for each unique product line described. The verifying system allows the sale of units of that inventory line until the described value is met; at this point the token moves into arrears if more items are sold, unless the inventory is replenished. Upon replacement, the expiration date of each item is checked by the verifier to ensure:</p>
+    <div style="margin:0 0 16px;border-top:1px solid #DCD6CA;break-inside:avoid">
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">a</div>
+        <div>That each new expiration date conforms to any minimum required within the descriptor;</div>
+      </div>
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">b</div>
+        <div>That the sum of the days left prior to expiration of all items now covered is equal to or greater than the sum before the exchange took place; and</div>
+      </div>
+      <div style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">c</div>
+        <div>That the new standard deviation of the data set — comparing the original expiration profile against the new set, including leftover original stock and replacement stock — does not exceed a set deviation from the mean.</div>
+      </div>
+    </div>
+    <p style="margin:0 0 14px">This calculation prevents borrowers from creating a token representing products with distant expiration dates — and hence plenty of time to sell — and then cycling the original contents out and replacing them with less valuable, near-to-expiry product, reducing the effective value of the token.</p>
+    <p style="margin:0 0 14px">Another implementation uses the current price of an item, allowing replenishment of linked stock to counter price discounting. During cycling, the token can be programmed to require the current price, or an update to the average rolling historic price over a specified period, for each SKU. If price reductions or increases have varied the value of the underlying inventory, the contract can calculate how many extra or fewer items must be added in order to match the initial issuing value. All such calculations can be completed within the smart contract itself, autonomously, or prepared by a source trusted by all parties and presented to the token.</p>
+    <p style="margin:0 0 22px">An issuer may choose to create single-SKU or compounded SorB NFTs. For compounded tokens the multiple SKUs are all described, and then a minimum number or value required, and expiration value per SKU, defined. An issuer may also stack multiple tokens. Where a stack involves an "or better" calculation rule, the verifier places the least valuable — in our example, shortest expiration — in the first token, then issues further tokens so the inventory holding is divided into tranches. Inventory is cycled out by the verifying party by removing the least valuable first (first in, first out). Similarly, as multiple counterparties may participate in partial ownership of each token, the first to commit funds receives returns from the most valuable token (first in, last out).</p>
+
+    <h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Brief description of the drawings</h2>
+    <div style="margin:0 0 16px;border-top:1px solid #DCD6CA;break-inside:avoid">
+      <div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Fig. 1A</div>
+        <div>The decision-making process for issuing single or multiple SorB NFTs, and the calculation process necessary to order multiple tokens of the same SKU.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Fig. 2A</div>
+        <div>The calculations needed to issue a SorB NFT based on preset constraints.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid #DCD6CA">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#6B665C">Fig. 3A</div>
+        <div>The process and recalculations needed when real-world assets are sold and replaced with other like-for-like or better-for-like assets, as stock is used and replenished.</div>
+      </div>
+    </div>
+
+        <figure style="margin:0 0 20px;break-inside:avoid">
+      <img src="assets/figures/sorb-fig1a.svg" alt="Fig. 1A — Issuing single or tranched tokens" style="display:block;width:100%;border:1px solid #DCD6CA;background:#fff">
+      <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:8px">Fig. 1A — Issuing single or tranched tokens</figcaption>
+    </figure>
+    <figure style="margin:0 0 20px;break-inside:avoid">
+      <img src="assets/figures/sorb-fig2a.svg" alt="Fig. 2A — Constructing a token within deviation limits" style="display:block;width:100%;border:1px solid #DCD6CA;background:#fff">
+      <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:8px">Fig. 2A — Constructing a token within deviation limits</figcaption>
+    </figure>
+    <figure style="margin:0 0 20px;break-inside:avoid">
+      <img src="assets/figures/sorb-fig3a.svg" alt="Fig. 3A — Recalculation as stock is sold and replenished" style="display:block;width:100%;border:1px solid #DCD6CA;background:#fff">
+      <figcaption style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.08em;text-transform:uppercase;color:#6B665C;margin-top:8px">Fig. 3A — Recalculation as stock is sold and replenished</figcaption>
+    </figure>
+
+    <h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px">Detailed description of the drawings</h2>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace;font-size:9pt;font-weight:500;letter-spacing:0.1em;color:#1A1A18;margin:0 0 8px">Figure 1A</h3>
+    <p style="margin:0 0 14px">Data about the real-world assets to be represented by a cryptographically lockable electronic file is ascertained from a source-of-truth database or databases (102) by requesting and receiving a list of the unique identifying product codes and/or product identifiers for each item, and any other information considered useful for accurate identification of the asset (104). The entire data set can be locked in a single SorB NFT (106), or sorted by category — make, model, manufacturer (110) — to identify similar units, herein referred to as stock keeping units: units that can be considered interchangeable, like for like, but which may have different production dates and come from different batches. This allows the data to be analyzed and a decision made on whether one token will be issued per SKU, or multiple tokens are required to subdivide the SKU into tranches (112).</p>
+    <p style="margin:0 0 14px">Tranches are useful for several reasons — for example, large inventory holdings where treasury departments may wish to borrow against their token and want to present an instrument of a certain total consideration or product count as the underlying asset. Where multiple tokens are required, each separate stock keeping unit must be ordered to allow ranking from shortest to longest expiration date (116–118), summed to give a total days-to-expiration value, and the mean and standard deviation calculated. With this base data captured, it can be decided whether a single token will be issued for each SKU (Fig. 1B, 110). Each issued token then takes a hierarchical order within its SKU, where the most valuable represents the items furthest from expiration and the least valuable those closest to it (Fig. 1B, 112).</p>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace;font-size:9pt;font-weight:500;letter-spacing:0.1em;color:#1A1A18;margin:0 0 8px">Figure 2A</h3>
+    <p style="margin:0 0 14px">Each token can now be constructed. First the maximum acceptable absolute deviation from the mean is set and compared to the initial mean absolute deviation of the data set provided, ensuring the described disbursement of the data set's expiration dates is within acceptable limits (200, 202). If it is not, the oldest expiration date must be discarded (204) and the process repeated until within range (206) — this removal of aged stock reduces the overall deviation. When all criteria are met the token can be issued, recording each metadata item (208), which may include price, total consideration value, number of items, current absolute deviation from the mean, maximum absolute deviation from the mean, average expiration, total expiration value, a wait time for how long to pause before recalculation, and an end-date expiration for the token itself. The token is now cryptographically locked, ready for disbursement to a distributed ledger, blockchain or trusted centralized system.</p>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace;font-size:9pt;font-weight:500;letter-spacing:0.1em;color:#1A1A18;margin:0 0 8px">Figure 3A</h3>
+    <p style="margin:0 0 14px">After the specified wait time has passed (300), the end-date expiration of the token is checked. If it has not passed (302), the process of calculating changes to the underlying stock data — for each token separately and collectively — can proceed. Updated data must be retrieved from the source or sources of truth (304), and the stock allocated so that the absolute deviation from the mean and total days to expiration can be recalculated (306).</p>
+    <p style="margin:0 0 14px">If the new total days to expiration is greater than the previous cycle's after sold inventory has been replaced; the absolute deviation from the mean has not deteriorated (310); and the final count of inventory and/or total consideration represented is the same or greater than the previous cycle (312) — or, if valued by average sales price, the consideration of all like-for-like items is the same or increased based on historic sales data — then the token can be maintained for another cycle and its underlying data set locked by a new cryptographic hash (318).</p>
+    <p style="margin:0 0 14px">If the total days to expiration or the absolute mean has deteriorated, the item closest to expiration must be removed until within limits (308). If the count of inventory has then fallen below the minimum threshold, additional inventory must be assigned into the data set (314). If no more inventory is available for allocation, the token is no longer valid and must be burnt to prevent its use as a representation of its underlying data set. The inventory released can then be used to fill the required data sets of other tokens, or to create a new, lower-value token.</p>
+    <p style="margin:0 0 22px">Where multiple tokens are issued within a SKU, the ordered hierarchy by expiration is used to fill each one, and each token within a SKU must carry the same preset maximum variation from the mean for its standard deviation away from the average expiration age of the grouped items. Tokens can then be ordered from longest to shortest average expiration, allowing the system to cycle stock out of each token in an orderly first-in-first-out manner. This ensures that when stock is replaced the system can calculate the new total expiration value and standard deviation from the mean, and confirm the shared rules within the token have been met — that the inventory represented is like for like, that expiration dates have improved or been maintained to the satisfaction of the token's rule set, and that each token has therefore gained or maintained intrinsic value through the cycling of its underlying real-world asset, achieved fairly and in an order understood by all participants.</p>
+
+    <h2 style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#B4451F;margin:0 0 10px;break-after:avoid">Claims</h2>
+    <p style="margin:0 0 12px;font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.1em;text-transform:uppercase;color:#6B665C">What is claimed for:</p>
+    <ol style="margin:0 0 22px;padding-left:22px">
+      <li style="margin-bottom:14px">An electronic representation of a real-world physical asset or assets — a Same or Better Non-Fungible Token (SorB NFT) — used to describe that asset or those assets in an agreed manner, where comprised tokens allow for the sale and replacement of like-for-like or like-for-better assets; where said like-for-better assets are comparable to the assets they replace in all aspects other than possibly having a longer duration until expiration than the asset they intend to replace; and where the agreed parameters of the token are locked using cryptography — thus granting a capability allowing the issuer, or an independent third party, to verify that the inventory levels described by the issued token remain available, but where, if inventory is sold, it can be replaced by the "same" item or a "better" item in accordance with the description contained in the token.</li>
+      <li>It is further claimed that an adaptation of this invention is the ability to allow a variable value for the number of units the token represents within each cycle, as long as the calculated consideration for the data set captured or represented by the token remains the same as or more than when originally issued.</li>
+    </ol>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:8.5pt;letter-spacing:0.18em;text-transform:uppercase;color:#6B665C;border-top:1px solid #DCD6CA;padding-top:14px">Ends</div>
+  </div>
+</doc-page>
+</x-dc>
+</body>
+</html>
